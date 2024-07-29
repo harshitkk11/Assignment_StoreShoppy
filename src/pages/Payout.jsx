@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Dropdown } from "flowbite-react";
 import {
   MdCallMade,
@@ -13,14 +14,15 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { GoDownload } from "react-icons/go";
 import SideBar from "../components/SideBar";
 import Payments from "../utility/Payments";
-import { useState } from "react";
 
 const Payout = () => {
+  // For checkboxx of quick filter
   const [checked, setChecked] = useState({
     all: true,
     scheduled: false,
     queued: false,
   });
+
   return (
     <div className="flex w-full h-full">
       {/* Sidebar */}
@@ -96,6 +98,8 @@ const Payout = () => {
             </button>
           </div>
         </nav>
+
+        {/* Filter */}
         <nav className="w-full h-[9vh] flex bg-secondary px-6 bg-opacity-50">
           <div className="w-full h-full flex justify-start items-center gap-5">
             <p>Quick Filters:</p>
